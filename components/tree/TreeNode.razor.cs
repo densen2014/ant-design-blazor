@@ -473,7 +473,10 @@ namespace AntDesign
             TreeComponent.AddOrRemoveCheckNode(this);
             if (subnode.HasChildNodes)
                 foreach (var child in subnode.ChildNodes)
+                {
+                    Console.WriteLine($"{child.Title} {check}");
                     child?.SetChildChecked(child, check);
+                }
         }
 
         /// <summary>
